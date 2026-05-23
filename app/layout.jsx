@@ -2,6 +2,7 @@ import { Cormorant_Garamond, Montserrat, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { WhatsApp } from "@/components/Icons";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -62,6 +63,15 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <a
+          href="https://wa.me/2348033448408?text=Hello%2C%20I%20came%20across%20your%20website%20and%20would%20like%20to%20get%20in%20touch."
+          className="whatsapp-float"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat on WhatsApp"
+        >
+          <WhatsApp width={28} height={28} />
+        </a>
       </body>
     </html>
   );
