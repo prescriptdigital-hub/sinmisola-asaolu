@@ -35,8 +35,8 @@ export default function GalleryPage() {
           <Reveal className="center section-head" style={{ marginBottom: "48px" }}>
             <Ornament center />
             <p style={{ marginTop: "24px" }}>
-              Every photograph tells a small part of a larger story. Replace
-              these frames with cherished memories as the collection grows.
+              Moments of service, celebration, leadership and love. A living
+              record of a life poured out for family and community.
             </p>
           </Reveal>
 
