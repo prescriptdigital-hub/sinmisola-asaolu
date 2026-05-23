@@ -40,3 +40,5 @@ yarn-error.log*
 /sinmi_*.png
 /sinmi-_*.png
 /SINMI_LOGO.png
+
+.vercel
