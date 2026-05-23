@@ -1050,6 +1050,15 @@ p {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+  .page-banner {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+  .footer-base {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1061,6 +1070,29 @@ p {
   }
   .stats {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-banner {
+    padding-top: 110px;
+    padding-bottom: 44px;
+  }
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.72rem;
+  }
+  .section {
+    padding-block: clamp(56px, 10vw, 100px);
+  }
+  .footer-quote .sig {
+    font-size: 2rem;
+  }
+  .form-success {
+    padding: 40px 20px;
+  }
+  .fact .value {
+    font-size: 1.1rem;
   }
 }
 
@@ -1214,27 +1246,47 @@ p {
 }
 
 @media (max-width: 900px) {
+  /* Stack photo above text so her face is never covered by content */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    padding-top: 0;
+    padding-bottom: clamp(56px, 8vw, 80px);
+  }
   .hero-photo-bleed {
+    position: relative;
     width: 100%;
-    opacity: 0.45;
+    aspect-ratio: 3 / 4;
+    max-height: 520px;
+    min-height: 280px;
+    margin-top: 76px;
+    opacity: 1;
+    z-index: 0;
+    flex-shrink: 0;
   }
   .hero-photo-bleed::before {
+    /* Fade only at the very bottom to blend into the black text area */
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0.75) 100%
+      transparent 55%,
+      rgba(0, 0, 0, 0.85) 100%
     );
+  }
+  .hero-photo-bleed::after {
+    height: 35%;
   }
   .hero-content {
     max-width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 36px;
   }
   .hero-eyebrow {
     justify-content: center;
   }
   .hero-actions {
     justify-content: center;
+    flex-wrap: wrap;
   }
   .split {
     grid-template-columns: 1fr;
