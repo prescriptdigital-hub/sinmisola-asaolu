@@ -63,6 +63,14 @@ export default function Header() {
       </div>
 
       <div className={`mobile-panel ${menuOpen ? "open" : ""}`}>
+        <button
+          className="mobile-close"
+          aria-label="Close menu"
+          onClick={() => setMenuOpen(false)}
+        >
+          <span />
+          <span />
+        </button>
         <nav className="nav-links" aria-label="Mobile">
           {navLinks.map((link) => (
             <Link
